@@ -190,15 +190,15 @@ h2{{font-size:1.9rem;font-weight:800;letter-spacing:-.5px;margin-bottom:.5rem;li
 .metric-label{{font-size:.85rem;color:var(--muted);margin-top:.4rem}}
 
 /* DEMO CASE */
-#demo{{background:#0f1117;color:var(--code-text)}}
-#demo .section-label{{color:#4ade80}}
-#demo h2{{color:#fff}}
-#demo .section-sub{{color:#9ca3af}}
+#demo{{background:#f9fafb;color:var(--text)}}
+#demo .section-label{{color:var(--accent)}}
+#demo h2{{color:var(--text)}}
+#demo .section-sub{{color:var(--muted)}}
 
 .trace{{display:flex;flex-direction:column;gap:0;max-width:860px}}
 .trace-step{{
-  background:#1a1f2e;border:1px solid #2d3748;border-radius:var(--radius);
-  padding:1.4rem 1.6rem;position:relative;
+  background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+  padding:1.4rem 1.6rem;position:relative;box-shadow:var(--shadow);
 }}
 .trace-step-header{{
   display:flex;align-items:center;gap:.8rem;margin-bottom:1rem;
@@ -208,8 +208,8 @@ h2{{font-size:1.9rem;font-weight:800;letter-spacing:-.5px;margin-bottom:.5rem;li
   color:#fff;font-weight:800;font-size:.85rem;display:flex;align-items:center;
   justify-content:center;flex-shrink:0;
 }}
-.trace-step-title{{font-size:.95rem;font-weight:700;color:#fff}}
-.trace-step-method{{font-size:.75rem;color:#6b7280;font-family:monospace;margin-left:.3rem}}
+.trace-step-title{{font-size:.95rem;font-weight:700;color:var(--text)}}
+.trace-step-method{{font-size:.75rem;color:var(--muted);font-family:monospace;margin-left:.3rem}}
 
 .trace-arrow{{
   display:flex;justify-content:center;align-items:center;
@@ -220,24 +220,24 @@ h2{{font-size:1.9rem;font-weight:800;letter-spacing:-.5px;margin-bottom:.5rem;li
 .abstract-grid{{display:grid;grid-template-columns:1fr 1fr;gap:1rem}}
 @media(max-width:640px){{.abstract-grid{{grid-template-columns:1fr}}}}
 .abstract-box{{
-  background:#111827;border-radius:8px;padding:1rem 1.2rem;
-  border:1px solid #2d3748;
+  background:#f9fafb;border-radius:8px;padding:1rem 1.2rem;
+  border:1px solid var(--border);
 }}
 .abstract-box-label{{
   font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
-  color:#6b7280;margin-bottom:.5rem;
+  color:var(--muted);margin-bottom:.5rem;
 }}
 .abstract-pmid{{
   font-size:.78rem;font-family:monospace;color:var(--accent);margin-bottom:.5rem;display:block;
 }}
-.abstract-text{{font-size:.85rem;color:#cbd5e1;line-height:1.65;font-style:italic}}
+.abstract-text{{font-size:.85rem;color:#374151;line-height:1.65;font-style:italic}}
 
 /* code blocks in demo */
 .code-grid{{display:grid;grid-template-columns:1fr 1fr;gap:1rem}}
 @media(max-width:640px){{.code-grid{{grid-template-columns:1fr}}}}
-.code-block{{background:#111827;border-radius:8px;overflow:hidden;border:1px solid #2d3748}}
+.code-block{{background:#1e2a3a;border-radius:8px;overflow:hidden;border:1px solid #2d3748}}
 .code-block-label{{
-  background:#1e2a3a;padding:.5rem 1rem;font-size:.72rem;font-weight:700;
+  background:#162032;padding:.5rem 1rem;font-size:.72rem;font-weight:700;
   text-transform:uppercase;letter-spacing:.08em;color:#6b7280;border-bottom:1px solid #2d3748;
 }}
 .code-block pre{{
@@ -249,18 +249,18 @@ h2{{font-size:1.9rem;font-weight:800;letter-spacing:-.5px;margin-bottom:.5rem;li
 .rule-output{{display:flex;flex-direction:column;gap:.6rem}}
 .rule-row{{
   display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;
-  background:#111827;border-radius:6px;padding:.7rem 1rem;
-  border:1px solid #2d3748;font-size:.88rem;
+  background:#f9fafb;border-radius:6px;padding:.7rem 1rem;
+  border:1px solid var(--border);font-size:.88rem;
 }}
-.rule-key{{color:#6b7280;font-family:monospace;min-width:130px;font-size:.8rem}}
-.rule-val{{color:#e2e8f0;font-family:monospace}}
+.rule-key{{color:var(--muted);font-family:monospace;min-width:130px;font-size:.8rem}}
+.rule-val{{color:var(--text);font-family:monospace}}
 .rule-pass{{
-  margin-left:auto;background:#064e3b;color:#34d399;
+  margin-left:auto;background:#dcfce7;color:#15803d;
   padding:.15rem .6rem;border-radius:4px;font-size:.72rem;font-weight:700;
 }}
 
 /* final LLM output */
-.llm-output{{background:#111827;border-radius:8px;padding:1.2rem 1.5rem;border:1px solid #2d3748}}
+.llm-output{{background:#1e2a3a;border-radius:8px;padding:1.2rem 1.5rem;border:1px solid #2d3748}}
 .llm-output pre{{font-size:.85rem;line-height:1.8;color:#e2e8f0;overflow-x:auto}}
 .json-key{{color:#93c5fd}}
 .json-str{{color:#86efac}}
@@ -607,7 +607,7 @@ footer a{{color:var(--accent)}}
           </div>
           <div class="rule-row">
             <span class="rule-key">match_score</span>
-            <span class="rule-val">+2 same model organism · +0 cell type · <strong style="color:#fbbf24">score = 1 / 6</strong></span>
+            <span class="rule-val">+2 same model organism · +0 cell type · <strong style="color:var(--accent)">score = 1 / 6</strong></span>
           </div>
         </div>
       </div>
