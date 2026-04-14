@@ -385,7 +385,7 @@ footer a{{color:var(--accent)}}
         <p>Epilepsy research spans thousands of papers across different model organisms, cell types, and disease subtypes. A finding in mouse granule cells may directly contradict a finding in human TSC tissue — but no human researcher reads everything.</p>
       </div>
       <div class="problem-para">
-        <p>Contradictions are not just inconsistencies — they define where biological systems are under-specified and where intervention strategies are most uncertain: they point to unknown variables, boundary conditions, and unresolved mechanisms. But they are nearly impossible to find manually at scale.</p>
+        <p>Contradictions are not just inconsistencies — they define where biological systems are under-specified and where intervention strategies are most uncertain. They are nearly impossible to surface manually at scale.</p>
       </div>
       <div class="problem-para">
         <p>EpiContradiction automates this process: structured claim extraction → pairwise contradiction detection → ranked output with experiment suggestions.</p>
@@ -450,7 +450,7 @@ footer a{{color:var(--accent)}}
           </div>
           <div class="stage-io" style="margin-top:.7rem">
             <div class="stage-io-row"><span class="io-label">Input</span><span class="io-val">1,634 × 1,634 claim comparisons → {n_candidates} candidates after filters</span></div>
-            <div class="stage-io-row"><span class="io-label">Output</span><span class="io-val"><strong>{n_contradictions} confirmed contradiction</strong> (contradictions.json)</span></div>
+            <div class="stage-io-row"><span class="io-label">Output</span><span class="io-val"><strong>{n_contradictions} adjudicated contradiction candidate</strong> (contradictions.json)</span></div>
           </div>
         </div>
       </div>
