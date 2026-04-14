@@ -343,6 +343,7 @@ footer a{{color:var(--accent)}}
     <li><a href="#problem">Problem</a></li>
     <li><a href="#architecture">Architecture</a></li>
     <li><a href="#demo">Demo</a></li>
+    <li><a href="#intervention">Agenda</a></li>
     <li><a href="#claims">Claims</a></li>
     <li><a href="#limitations">Limitations</a></li>
   </ul>
@@ -355,7 +356,7 @@ footer a{{color:var(--accent)}}
     <h1>EpiContradiction</h1>
     <p class="hero-desc">
       An automated pipeline that reads epilepsy research papers and surfaces
-      candidate contradictions in epilepsy literature for rapid expert review,
+      candidate contradictions to define intervention hypotheses,
       using LLM-based claim extraction and rule-based contradiction detection.
     </p>
     <div class="hero-meta">
@@ -384,7 +385,7 @@ footer a{{color:var(--accent)}}
         <p>Epilepsy research spans thousands of papers across different model organisms, cell types, and disease subtypes. A finding in mouse granule cells may directly contradict a finding in human TSC tissue — but no human researcher reads everything.</p>
       </div>
       <div class="problem-para">
-        <p>Contradictions between published findings represent the most valuable signal in a literature: they point to unknown variables, boundary conditions, and unresolved mechanisms. But they are nearly impossible to find manually at scale.</p>
+        <p>Contradictions are not just inconsistencies — they define where biological systems are under-specified and where intervention strategies are most uncertain: they point to unknown variables, boundary conditions, and unresolved mechanisms. But they are nearly impossible to find manually at scale.</p>
       </div>
       <div class="problem-para">
         <p>EpiContradiction automates this process: structured claim extraction → pairwise contradiction detection → ranked output with experiment suggestions.</p>
@@ -641,6 +642,106 @@ footer a{{color:var(--accent)}}
       </div>
 
     </div><!-- /trace -->
+    <p style="font-size:.85rem;font-style:italic;color:var(--muted);margin-top:1.2rem;max-width:860px">
+      This example illustrates a conditional contradiction, suggesting that somatostatin's effect is context-dependent.
+      Such contradictions naturally define intervention optimization problems under uncertainty.
+    </p>
+  </div>
+</section>
+
+<!-- INTERVENTION OPTIMIZATION -->
+<section id="intervention">
+  <div class="container">
+    <div class="section-label">Research agenda</div>
+    <h2>From contradictions to intervention optimization</h2>
+    <p class="section-sub">A research agenda</p>
+
+    <div class="arch-stages">
+      <div class="arch-stage">
+        <div class="stage-num">
+          <div class="stage-num-n">1</div>
+          <div class="stage-num-label">Detection</div>
+        </div>
+        <div class="stage-body">
+          <div class="stage-title">Contradiction detection</div>
+          <p style="font-size:.9rem;color:#374151;margin-top:.4rem">
+            The pipeline surfaces candidate contradictions across studies, identifying where the effect of a mechanism
+            or intervention is inconsistent across experimental contexts. These are not noise — they are signals of
+            under-specified biology.
+          </p>
+        </div>
+      </div>
+
+      <div class="arch-stage">
+        <div class="stage-num">
+          <div class="stage-num-n">2</div>
+          <div class="stage-num-label">Hypothesis</div>
+        </div>
+        <div class="stage-body">
+          <div class="stage-title">Hypothesis space</div>
+          <p style="font-size:.9rem;color:#374151;margin-top:.4rem;margin-bottom:.7rem">
+            Each contradiction implies one or more hidden variables that modulate the observed effect:
+          </p>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.7rem">
+            <span class="tag" style="background:var(--accent-light);color:var(--accent-dark);font-weight:600">disease subtype</span>
+            <span class="tag" style="background:var(--accent-light);color:var(--accent-dark);font-weight:600">circuit state</span>
+            <span class="tag" style="background:var(--accent-light);color:var(--accent-dark);font-weight:600">experimental context</span>
+          </div>
+          <p style="font-size:.9rem;color:#374151">
+            Resolving which variable is responsible narrows the hypothesis space for targeted intervention design.
+          </p>
+        </div>
+      </div>
+
+      <div class="arch-stage">
+        <div class="stage-num">
+          <div class="stage-num-n">3</div>
+          <div class="stage-num-label">Intervention</div>
+        </div>
+        <div class="stage-body">
+          <div class="stage-title">Intervention question</div>
+          <p style="font-size:.9rem;color:#374151;margin-top:.4rem">
+            Rather than resolving contradictions analytically, we reframe them as optimization problems: what intervention
+            parameters produce consistent, context-robust seizure suppression across experimental conditions?
+          </p>
+        </div>
+      </div>
+
+      <div class="arch-stage">
+        <div class="stage-num">
+          <div class="stage-num-n">4</div>
+          <div class="stage-num-label">Future</div>
+        </div>
+        <div class="stage-body">
+          <div class="stage-title" style="display:flex;align-items:center;gap:.7rem">
+            Closed-loop optimization
+            <span style="background:#f3f4f6;color:var(--muted);font-size:.7rem;font-weight:700;padding:.15rem .55rem;border-radius:999px;text-transform:uppercase;letter-spacing:.06em">future direction</span>
+          </div>
+          <p style="font-size:.9rem;color:#374151;margin-top:.4rem;margin-bottom:.9rem">
+            This reframing enables a closed-loop system in which contradiction detection feeds directly into computational optimization:
+          </p>
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:.4rem;font-size:.82rem;margin-bottom:.7rem">
+            <span style="background:var(--accent-light);color:var(--accent-dark);padding:.25rem .65rem;border-radius:6px;font-weight:600">LLM proposes parameters</span>
+            <span style="color:var(--accent);font-weight:700">→</span>
+            <span style="background:var(--accent-light);color:var(--accent-dark);padding:.25rem .65rem;border-radius:6px;font-weight:600">Digital twin simulates response</span>
+            <span style="color:var(--accent);font-weight:700">→</span>
+            <span style="background:var(--accent-light);color:var(--accent-dark);padding:.25rem .65rem;border-radius:6px;font-weight:600">RL evaluates suppression</span>
+            <span style="color:var(--accent);font-weight:700">→</span>
+            <span style="background:var(--accent-light);color:var(--accent-dark);padding:.25rem .65rem;border-radius:6px;font-weight:600">Parameters refined</span>
+          </div>
+          <p style="font-size:.8rem;color:var(--muted)">
+            e.g. drug dosage, stimulation frequency, or circuit targeting — evaluated against a neural simulation such as The Virtual Brain (TVB)
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div style="border-left:3px solid var(--accent);background:var(--accent-light);border-radius:0 var(--radius) var(--radius) 0;padding:1rem 1.4rem;margin-top:1.8rem;max-width:860px">
+      <p style="font-size:.95rem;color:#0f5132;line-height:1.65">
+        <strong>EpiContradiction serves as a problem generator</strong> — identifying high-value regions of the literature
+        where intervention optimization is most needed, and where the cost of under-specification is highest.
+      </p>
+    </div>
   </div>
 </section>
 
