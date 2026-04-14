@@ -8,9 +8,9 @@
 
 ### Top 3 Most Interesting Contradictions
 
-1. **somatostatin interneurons / somatostatin** — PMID 41835966 vs PMID 41352576 (score: 7/10)
+1. **somatostatin interneurons / somatostatin** — PMID 41835966 vs PMID 41352576 (score: 7 /10)
 
-### Most Common Entities Involved in Contradictions
+### Most Common Entities
 
 - `somatostatin interneurons` — appears in 1 contradiction(s)
 - `somatostatin` — appears in 1 contradiction(s)
@@ -28,7 +28,6 @@
 | **Model** | mouse | in-vitro |
 | **Cell type** | granule cells | unknown |
 | **Epilepsy type** | unknown | tuberous sclerosis complex |
-| **Confidence** | primary finding | primary finding |
 
 **Type:** Conditional Contradiction | **LLM Confidence:** Medium | **Interest Score:** 7/10
 

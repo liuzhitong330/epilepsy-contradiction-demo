@@ -1,0 +1,42 @@
+[
+  {
+    "contradiction_type": "conditional_contradiction",
+    "confidence": "medium",
+    "explanation": "The findings differ in experimental systems - Paper A shows somatostatin interneurons have no effect on inhibitory currents in mouse granule cells, while Paper B shows somatostatin decreases GABAergic currents in a human brain membrane system with TSC pathology.",
+    "resolving_experiment": "Test somatostatin's effect on GABAergic currents in mouse granule cells from TSC models versus wild-type controls using the same patch-clamp methodology as Paper A.",
+    "interest_score": 7,
+    "pmid_a": "41835966",
+    "pmid_b": "41352576",
+    "claim_a": {
+      "subject": "somatostatin interneurons",
+      "direction": "no-effect",
+      "effect": "inhibitory postsynaptic currents onto dendrites of granule cells in outer molecular layer",
+      "condition": {
+        "model": "mouse",
+        "cell_type": "granule cells",
+        "epilepsy_type": "unknown"
+      },
+      "confidence": "primary finding",
+      "method": [
+        "patch-clamp electrophysiology",
+        "optogenetic stimulation"
+      ]
+    },
+    "claim_b": {
+      "subject": "somatostatin",
+      "direction": "decreases",
+      "effect": "suppression of GABAergic currents",
+      "condition": {
+        "model": "in-vitro",
+        "cell_type": "unknown",
+        "epilepsy_type": "tuberous sclerosis complex"
+      },
+      "confidence": "primary finding",
+      "method": [
+        "electrophysiological recordings",
+        "Xenopus laevis oocytes microtransplanted with human brain membranes"
+      ]
+    },
+    "match_score": 1
+  }
+]
