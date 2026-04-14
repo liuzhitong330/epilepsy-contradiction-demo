@@ -648,6 +648,55 @@ footer a{{color:var(--accent)}}
 
       <div class="trace-arrow">↓</div>
 
+      <!-- VALIDATION EXPERIMENT -->
+      <div class="trace-step">
+        <div class="trace-step-header">
+          <div class="trace-step-num" style="background:#6b7280">V</div>
+          <span class="trace-step-title">Validation experiment</span>
+          <span class="trace-step-method">held-out recall test</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem">
+          <div>
+            <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:.6rem">Setup</div>
+            <p style="font-size:.88rem;color:#374151;line-height:1.65;margin-bottom:.8rem">
+              To test the pipeline's recall, we introduced a held-out pair representing a well-established
+              contradiction in GABAergic inhibition:
+            </p>
+            <div style="background:#f9fafb;border-radius:8px;padding:.9rem 1rem;border:1px solid var(--border);font-size:.85rem;line-height:1.65;color:#374151">
+              <p style="margin-bottom:.6rem">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/19966779" target="_blank" style="font-family:monospace;font-size:.78rem;color:var(--accent)">PMID 19966779</a>
+                <strong> · Cope et al. 2009, Nature Medicine</strong><br>
+                Enhanced tonic GABA<sub>A</sub> inhibition in thalamocortical neurons → promotes absence seizures
+              </p>
+              <p>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/23207591" target="_blank" style="font-family:monospace;font-size:.78rem;color:var(--accent)">PMID 23207591</a>
+                <strong> · Cammarota et al. 2013, J Physiol</strong><br>
+                Parvalbumin fast-spiking interneurons → GABAergic inhibitory barrages suppress focal seizure propagation
+              </p>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:.6rem">Result</div>
+            <div style="background:#fffbeb;border:1.5px solid #f59e0b;border-radius:8px;padding:.9rem 1rem;font-size:.85rem;line-height:1.7;color:#78350f">
+              <p style="font-weight:700;margin-bottom:.6rem">❌ Not detected by rule engine (Stage 3a)</p>
+              <p style="margin-bottom:.6rem">Effect strings share no lexical overlap:</p>
+              <p style="font-family:monospace;font-size:.78rem;background:#fef3c7;padding:.4rem .6rem;border-radius:4px;margin-bottom:.3rem">'inhibitory barrages in pyramidal neurons'</p>
+              <p style="text-align:center;font-size:.8rem;margin-bottom:.3rem">vs</p>
+              <p style="font-family:monospace;font-size:.78rem;background:#fef3c7;padding:.4rem .6rem;border-radius:4px;margin-bottom:.7rem">'inhibitory postsynaptic currents onto granule cells'</p>
+              <p style="margin-bottom:.25rem"><strong>Failure mode localized to:</strong> effect overlap filter</p>
+              <p style="margin-bottom:.25rem"><strong>Root cause:</strong> synonymous biological terminology</p>
+              <p style="margin-bottom:.7rem"><strong>Fix:</strong> embedding-based semantic similarity (BioBERT)</p>
+              <p>This result is consistent with the known limitation documented in the Limitations section.</p>
+            </div>
+          </div>
+        </div>
+        <p style="margin-top:1rem;font-size:.88rem;font-weight:600;color:var(--accent)">
+          The validation pair was not detected — but the failure mode is precisely localizable, not opaque.
+        </p>
+      </div>
+
+      <div class="trace-arrow">↓</div>
+
       <!-- STEP 5: intervention question -->
       <div class="trace-step">
         <div class="trace-step-header">
